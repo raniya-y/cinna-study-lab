@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinna's Study Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Pacifico&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+  <div id="notebookSidebar">
+    <h2>📓 Notebooks</h2>
+    <ul id="notebookList"></ul>
+    <button id="addNotebookBtn">➕ Add Notebook</button>
+  
+    <div id="newNotebookContainer" style="display:none; margin-top: 15px;">
+      <input type="text" id="newNotebookInput" placeholder="Notebook name..." />
+      <button id="saveNotebookBtn">Save</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="header">
+      <img src="logo2.png" alt="Cinna's Study Lab Logo" class="logo">
+      <button id="infoBtn" class="info-button" title="About this site">ℹ️</button>
+
+<!-- Info Modal -->
+<div id="infoModal" class="info-modal">
+  <div class="info-content">
+    <span class="close">&times;</span>
+    <h3>About Cinna's Study Lab 💙 </h3>
+    <p>This site helps you turn long study notes into <strong> bullet point summaries</strong>, <strong>quiz questions</strong>, and <strong>mnemonics</strong> using AI ✨</p>
+    <p>Just paste your text, choose the output type, and click Generate!</p>
+    <p>You can also <strong>copy</strong> and <strong>download</strong> your notes for future revision </p>
+    <p> Organize your study content by creating cute Notebooks! 🌸 
+      Click the ➕ "Add Notebook" button on the sidebar to create custom notebooks for your notes.
+      It's a simple way to keep your study sessions neat and colorful! 🎀 </p>
+  </div>
+</div>
+     
+    </div>
+    <textarea id="inputText" placeholder="Paste your lecture notes or textbook text here..."></textarea>
+
+    <select id="outputType">
+      <option value="summary">Bullet Point Summary</option>
+      <option value="quiz">Quiz Questions</option>
+      <option value="mnemonics">Mnemonics</option> 
+    </select>
+
+    <button id="generateBtn">Generate</button>
+    <div id="loader" class="loader" style="display: none;"></div>
+    <div id="outputArea">
+      <h2>Output:</h2>
+      <div id="outputContent"></div>
+    </div>
+    <div style="display: flex; gap: 10px; margin-top: 10px;">
+      <button id="copyBtn" style="font-size: 0.8rem;">Copy 📋 </button>
+      <span id="copyTooltip" style="display:none;">Copied!</span>
+      <button id="downloadBtn" style="font-size: 0.8rem;">Download 📥 </button>
+    </div>
+  </div>
+
+  <div id="mascot">
+    <div id="speechBubble">You’re doing great! 🌟</div>
+    <img src="cinnamoroll-flower-head-piece.png" alt="Mascot" id="mascotImage">
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
