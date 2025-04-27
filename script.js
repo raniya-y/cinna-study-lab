@@ -1,4 +1,4 @@
-const apiKey = "AIzaSyAR9W8RxGk0b7DJAPzYtKwQUrDUiml-n9w";
+const apiKey = " "; // Enter your API key here
 const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
 const generateBtn = document.getElementById("generateBtn");
